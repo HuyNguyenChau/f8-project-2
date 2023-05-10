@@ -9,7 +9,12 @@ body {
     font-family: "Poppins", sans-serif;
     font-size: 1.6rem;
 }
-/* ----------------------Phần dùng chung Common----------------------------------------------------------------------------- */
+/* ---------------------Phần các biến--------------------------------------------------------------------------------------- */
+:root {
+    --font-sen: "Sen", sans-serif;
+    --primary-color: #ffb900;
+}
+/* ---------------------Phần dùng chung Common------------------------------------------------------------------------------ */
 /* -----Main-content----- */
 .main-content {
     width: 1170px;
@@ -34,6 +39,9 @@ a {
     background: #171100;
     border-radius: 24.5px;
 }
+.btn:hover {
+    opacity: 0.8;
+}
 /* ----------------------Phần nội dung CSS--------------------------------------------------------------------------------- */
 
 /* -------------------------------------Phần Header------------------------------ */
@@ -42,6 +50,7 @@ a {
 }
 .header.fixed {
     position: sticky;
+    z-index: 1;
     top: -28px;
 }
 .header .body {
@@ -88,4 +97,157 @@ a {
 }
 .header .body .action {
     margin-left: 49px;
+}
+/* -------------------------------------Phần Hero------------------------------ */
+.hero {
+    background: #fffcf4;
+    padding: 64px 0 65px;
+}
+.hero .body {
+    display: flex;
+}
+/* ----------Phần Hero-left---------- */
+.hero .body .media-block {
+    position: relative;
+    width: 48%;
+}
+/* -----Phần ảnh lớn----- */
+.hero .body .media-block .img {
+    display: block;
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+/* -----Phần ảnh nhỏ----- */
+.hero-summary {
+    position: absolute;
+    width: 270px;
+    padding: 24px;
+    right: 0px;
+    bottom: 48px;
+    background: #ffffff;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+.hero-summary .item {
+    display: flex;
+    align-items: center;
+}
+.hero-summary .item + .item {
+    margin-top: 14px;
+}
+/* Phần css hình tròn bảo quanh ảnh nhỏ của nhỏ*/
+.hero-summary .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fff9e8;
+    /* Phần display: flex này để ảnh nằm giữa width height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-summary .icon.icon-2 {
+    background: #fcefff;
+}
+.hero-summary .icon.icon-3 {
+    background: #ebeaff;
+}
+/* Phần info của ảnh nhỏ */
+.hero-summary .info {
+    margin-left: 16px;
+}
+.hero-summary .info .label {
+    font-size: 1.4rem;
+    line-height: 1.86; /* identical to box height, or 186% */
+    color: #5f5b53;
+}
+.hero-summary .info .title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67; /* identical to box height, or 167% */
+    color: #171100;
+}
+/* ----------Phần Hero right---------- */
+.hero .body .content-block {
+    width: 52%;
+    /* width: 470px; */
+    /* height: 558px; */
+    padding: 64px 0 0 130px;
+}
+/* Phần h1 */
+.hero .body .content-block .heading {
+    font-family: var(--font-sen);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.8rem;
+    line-height: 1.17; /* or 117% */
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+/* Phần mô tả desc  */
+.hero .body .content-block .desc {
+    margin-top: 22px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67; /* or 167% */
+    color: #5f5b53;
+}
+/* Phần cta-group */
+.hero .body .content-block .cta-group {
+    display: flex;
+    align-items: center;
+    margin: 38px 0 48px 0;
+}
+/* Phần nút bấm màu vàng */
+.hero .body .content-block .btn.hero-cta {
+    min-width: 180px;
+    line-height: 64px;
+    background-color: var(--primary-color);
+    border-radius: 32px;
+}
+/* Phần cả nút watch-video và icon */
+.hero .body .content-block .cta-group .watch-video {
+    display: flex;
+    align-items: center;
+    background: #fffcf4;
+    margin-left: 28px;
+    border: none;
+    cursor: pointer; /* cursor: pointer --> để thêm hiệu ứng khi di chuột vào khi không phải thẻ a */
+}
+/* Phần icon watch-video */
+.hero .body .content-block .cta-group .watch-video .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+}
+/* Phần chữ "watch-video" */
+.hero .body .content-block .cta-group .watch-video span {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px; /* identical to box height, or 167% */
+    margin-left: 14px;
+    color: #171100;
+}
+
+/* Phần chữ to "50k 70+" */
+.hero .body .content-block .desc.stats {
+    margin-top: 8px;
+}
+.hero .body .content-block .desc.stats strong {
+    font-family: var(--font-sen);
+    font-weight: 700;
+    font-size: 4.4rem;
+    line-height: 1.23; /* identical to box height, or 123% */
+    color: #171100;
+    padding-right: 14px;
+}
+.hero .body .content-block .desc.stats strong:nth-child(2) {
+    margin-left: 28px;
 }
