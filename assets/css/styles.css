@@ -42,6 +42,22 @@ a {
 .btn:hover {
     opacity: 0.8;
 }
+/* h1 h2 những nội dung chính của trang */
+.heading {
+    font-family: var(--font-sen);
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+.heading.heading-lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17; /* or 117% */
+}
+.heading.heading-lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
 /* ----------------------Phần nội dung CSS--------------------------------------------------------------------------------- */
 
 /* -------------------------------------Phần Header------------------------------ */
@@ -176,16 +192,7 @@ a {
     /* height: 558px; */
     padding: 64px 0 0 130px;
 }
-/* Phần h1 */
-.hero .body .content-block .heading {
-    font-family: var(--font-sen);
-    font-style: normal;
-    font-weight: 700;
-    font-size: 5.8rem;
-    line-height: 1.17; /* or 117% */
-    letter-spacing: -0.02em;
-    color: #171100;
-}
+
 /* Phần mô tả desc  */
 .hero .body .content-block .desc {
     margin-top: 22px;
@@ -214,7 +221,7 @@ a {
     background: #fffcf4;
     margin-left: 28px;
     border: none;
-    cursor: pointer; /* cursor: pointer --> để thêm hiệu ứng khi di chuột vào khi không phải thẻ a */
+    cursor: pointer; /* cursor: pointer --> để thêm hiệu ứng khi di chuột vào khi không phải thẻ a ( ví dụ di chuột vào ảnh ) */
 }
 /* Phần icon watch-video */
 .hero .body .content-block .cta-group .watch-video .icon {
@@ -250,4 +257,44 @@ a {
 }
 .hero .body .content-block .desc.stats strong:nth-child(2) {
     margin-left: 28px;
+}
+/* -------------------------------------------------Phần Popular---------------------------------------------------------- */
+/* ----------Phần Popular-top---------- */
+.popular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+.popular .popular-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Phần info */
+.popular .popular-top .info .desc {
+    margin-top: 16px;
+    width: 458px;
+    font-size: 1.8rem;
+    line-height: 1.67; /* or 167% */
+    color: #5f5b53;
+}
+/* Phần button chevron <> */
+.popular .popular-top .controls {
+    display: flex;
+    gap: 18px;
+}
+.popular .popular-top .controls .controls-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    background-color: transparent;
+}
+.popular .popular-top .controls .controls-btn:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+    cursor: pointer;
 }
