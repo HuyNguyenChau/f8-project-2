@@ -390,3 +390,66 @@ a {
     background: var(--primary-color);
     border: var(--primary-color);
 }
+/* ------------------------------------------Phần Feedback---------------------------------------------------------------- */
+.feedback {
+    margin-top: 135px;
+    padding: 96px 0px;
+    background: #2e2100;
+}
+.feedback .feedback-item {
+    display: flex;
+    justify-content: space-between;
+}
+/* ----------Phần info---------- */
+/* Phần ảnh avatar */
+.feedback .feedback-item .info .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* Phần tiêu đề dưới ảnh */
+.feedback .feedback-item .info .title {
+    margin-top: 18px;
+    font-family: var(--font-sen);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.42; /* identical to box height, or 142% */
+    color: #f7f7f7;
+}
+/* Phần mô tả dưới ảnh */
+.feedback .feedback-item .info .desc {
+    margin-top: 4px;
+    font-size: 1.4rem;
+    line-height: 1.86; /* identical to box height, or 186% */
+    color: #bfbcb3;
+}
+/* Phần dấu 3 chấm dưới ảnh */
+.feedback .feedback-item .info .dots {
+    margin-top: 28px;
+    display: flex;
+    gap: 6px;
+}
+.feedback .feedback-item .info .dots .dot {
+    width: 6px;
+    height: 6px;
+    background: #634700;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.feedback .feedback-item .info .dots .dot.active {
+    background: #ffb900;
+    cursor: default;
+}
+/* ----------Phần content nôi dung phản hồi---------- */
+.feedback .feedback-item .content {
+    width: 66%; /* Thay vì đặt width 770px ta lấy 770/1170 x 100 để đổi sang % cho chuẩn thiết kế */
+}
+.feedback .feedback-item .content blockquote {
+    margin-left: 30px;
+    font-style: italic;
+    font-size: 2.6rem;
+    line-height: 1.54;
+    color: #ffffff;
+}
