@@ -32,15 +32,26 @@ a {
     line-height: 50px;
     min-width: 118px;
     font-weight: 600;
-    font-size: 1.6rem;
-    /* line-height: 28px; identical to box height, or 175% */
+    font-size: 1.6rem; /* line-height: 28px; identical to box height, or 175% */
     text-align: center;
     color: #ffffff;
     background: #171100;
     border-radius: 24.5px;
+    cursor: pointer;
 }
 .btn:hover {
     opacity: 0.8;
+}
+/* Tạo line-clamp -> Xuất hiện dấu 3 chấm khi vượt quá số dòng quy định*/
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-all;
+}
+.line-clamp-2 {
+    --line-clamp: 2;
 }
 /* h1 h2 những nội dung chính của trang */
 .heading {
@@ -297,4 +308,85 @@ a {
     color: #fff;
     background-color: var(--primary-color);
     cursor: pointer;
+}
+/* ------------Phần Course-list ( Popular-bottom )-------------- */
+.course-list {
+    display: flex;
+    margin-top: 55px;
+    gap: 30px;
+}
+.course-list .course-item {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #e2dfda;
+    border-radius: 12px;
+}
+.course-list .course-item:hover {
+    border-color: transparent;
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+}
+/* -----Phần ảnh----- */
+.course-list .course-item .thumb {
+    /* Đây calc và margin -1px để cho ảnh đè lên border theo đúng mẫu */
+    width: calc(100% + 2px);
+    height: 278px;
+    margin: -1px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+}
+/* -----Phần info----- */
+.course-list .course-item .info {
+    padding: 16px 22px 22px;
+}
+.course-list .course-item .info .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Phần title info */
+.course-list .course-item .info .head .title {
+    padding-right: 6px;
+}
+.course-list .course-item .info .head .title a {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67; /* identical to box height, or 167% */
+    color: #171100;
+}
+/* Phần value "4.5" */
+.course-list .course-item .info .head .value {
+    margin-left: 6px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: var(--primary-color);
+}
+/* Phần mô tả desc */
+.course-list .course-item .info .desc {
+    margin-top: 6px;
+    font-size: 1.4rem;
+    line-height: 1.86; /* or 186% */
+    color: #5f5b53;
+}
+/* Phần foot của info */
+.course-list .course-item .info .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Phần giá tiền */
+.course-list .course-item .info .foot .price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67; /* identical to box height, or 167% */
+    color: #171100;
+}
+/* Phần nút bấm "Book now" */
+.course-list .course-item .info .foot .book-btn {
+    /* Thay đổi mặc định border và padding của thẻ <button> */
+    border: none;
+    padding: 0px;
+}
+.course-list .course-item .info .foot .btn:hover {
+    background: var(--primary-color);
+    border: var(--primary-color);
 }
