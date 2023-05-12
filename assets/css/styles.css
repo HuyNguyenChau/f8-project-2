@@ -462,3 +462,55 @@ a {
     line-height: 1.54;
     color: #ffffff;
 }
+/* ---------------------------------------------Features------------------------------------------------------------------ */
+.features {
+    margin-top: 135px;
+    padding: 65px 0px;
+}
+.features .body {
+    display: flex;
+    justify-content: space-between;
+}
+/* ----------Phần ảnh features---------- */
+.features .body .images {
+    display: flex;
+    gap: 30px;
+}
+.features .body .images img {
+    width: 270px;
+    height: 404px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.features .body .images img.img-1 {
+    margin-top: 34px;
+}
+/* ----------Phần content features----------  */
+.features .body .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 40%;
+}
+/* Phần h2  */
+.features .body .content .heading.heading-lv2 {
+    font-family: var(--font-sen);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+/* Phần mô tả desc */
+.features .body .content .desc {
+    margin-top: 16px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #5f5b53;
+}
+/* Phần nút bấm "Sign Up" */
+.features .body .content .btn {
+    margin-top: 32px;
+    min-width: 137px;
+    background: var(--primary-color);
+    border-radius: 26px;
+}
