@@ -4,6 +4,7 @@
 }
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body {
     font-family: "Poppins", sans-serif;
@@ -491,7 +492,7 @@ a {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 40%;
+    width: 43%;
 }
 /* Phần h2  */
 .features .body .content .heading.heading-lv2 {
@@ -513,4 +514,40 @@ a {
     min-width: 137px;
     background: var(--primary-color);
     border-radius: 26px;
+}
+/* -------------------------------------------------Features 2------------------------------------------------------------- */
+.features-2 {
+    margin-top: 135px;
+    padding: 65px 0px;
+}
+.features-2 .body {
+    display: flex;
+    justify-content: space-between;
+}
+/* Phần content features 2 */
+.features-2 .body .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+}
+.features-2 .body .content .desc {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #5f5b53;
+}
+.features-2 .body .content .btn {
+    margin-top: 32px;
+    background: var(--primary-color);
+}
+/* Phần ảnh features 2 */
+
+.features-2 .body .images img {
+    width: 470px;
+    height: 440px;
+    border-radius: 20px;
+    object-fit: cover;
 }
